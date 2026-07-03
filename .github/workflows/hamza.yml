@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   secure-rdp:
-    runs-on: windows-2022
+    runs-on: windows-10
     timeout-minutes: 3600
     steps:
       - name: Configure Core RDP Settings
@@ -72,6 +72,7 @@ jobs:
       - name: Maintain Connection
         run: |
           Write-Host "`n=== RDP ACCESS ==="
+          Write-Host "كود تجريبي لتشغيل Windows 10"
           Write-Host "Address: $env:TAILSCALE_IP"
           Write-Host "Username: hamza"
           Write-Host "Password: admin@123"
